@@ -7,18 +7,20 @@
     <script src="wavesurfer.js"></script>
     <script src="wavesurfer.microphone.js"></script>
     <script type="">
+      var height = window.innerHeight;
+      console.log(height);
       var wavesurfer = WaveSurfer.create({
-      container     : '#waveform',
-      waveColor: '#0000FF',
-      progressColor: '#FF0000',
-      cursorColor: '#00FF00',
-      barWidth: 5,
-      barRadius: 5,
-      cursorWidth: 5,
-      height: window.innerHeight,
-      barGap: 5,
-      plugins: [
-          WaveSurfer.microphone.create()
+        container     : '#waveform',
+        waveColor: '#0000FF',
+        progressColor: '#FF0000',
+        cursorColor: '#00FF00',
+        barWidth: 5,
+        barRadius: 5,
+        cursorWidth: 5,
+        height: height,
+        barGap: 5,
+        plugins: [
+            WaveSurfer.microphone.create()
         ]
       });
 
