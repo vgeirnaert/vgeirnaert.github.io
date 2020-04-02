@@ -350,14 +350,14 @@ function () {
       if (this.hasProgressCanvas) {
         this.progressCtx.clearRect(0, 0, this.progressCtx.canvas.width, this.progressCtx.canvas.height);
       }*/
-	    var color = this.waveCtx.fillStyle;
+	    /*var color = this.waveCtx.fillStyle;
 	    this.waveCtx.fillStyle = '#00000001';
 	    this.waveCtx.fillRect(0, 0, this.waveCtx.canvas.width, this.waveCtx.canvas.height); // progress
 
-      if (this.hasProgressCanvas) {
-        this.progressCtx.fillRect(0, 0, this.progressCtx.canvas.width, this.progressCtx.canvas.height);
-      }
-	    this.waveCtx.fillStyle = color;
+	      if (this.hasProgressCanvas) {
+		this.progressCtx.fillRect(0, 0, this.progressCtx.canvas.width, this.progressCtx.canvas.height);
+	      }
+	    this.waveCtx.fillStyle = color;*/
     }
     /**
      * Set the fill styles for wave and progress
