@@ -1,0 +1,30 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <div id="waveform" style="height: 100%; width: 100%;">
+    </div>
+    <script src="https://unpkg.com/wavesurfer.js"></script>
+    <script type="">
+      var wavesurfer = WaveSurfer.create({
+      container     : '#waveform',
+      waveColor     : 'black',
+      interact      : false,
+      cursorWidth   : 0,
+      plugins: [
+          WaveSurfer.microphone.create()
+        ]
+      });
+
+      wavesurfer.microphone.on('deviceReady', function(stream) {
+          console.log('Device ready!', stream);
+      });
+      wavesurfer.microphone.on('deviceError', function(code) {
+          console.warn('Device error: ' + code);
+      });
+
+      // start the microphone
+      wavesurfer.microphone.start();
+    </script>
+  </body>
+</html>
