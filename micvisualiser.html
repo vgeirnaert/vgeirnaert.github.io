@@ -1,7 +1,7 @@
 <html>
   <head>
   </head>
-  <body>
+  <body style="background-color: #000000">
     <div id="waveform" style="height: 100%; width: 100%;">
     </div>
     <script src="wavesurfer.js"></script>
@@ -11,12 +11,12 @@
       console.log(height);
       var wavesurfer = WaveSurfer.create({
         container     : '#waveform',
-        waveColor: '#0000FF',
-        progressColor: '#FF0000',
-        cursorColor: '#00FF00',
+        waveColor: '#4353FF',
+        progressColor: '#4353FF',
+        cursorColor: '#000000',
         barWidth: 5,
         barRadius: 5,
-        cursorWidth: 5,
+        cursorWidth: 0,
         height: height,
         barGap: 5,
         plugins: [
