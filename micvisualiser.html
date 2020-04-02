@@ -7,13 +7,25 @@
     <script src="wavesurfer.js"></script>
     <script src="wavesurfer.microphone.js"></script>
     <script type="text/javascript">
-      function start() {
+      function startRed() {
+        start('#ff8282');
+      }
+      
+      function startBlue() {
+          start('#82cbff');
+      }
+      
+      function startGreen() {
+        start('#82ff91');
+      }
+      
+      function start(color) {
         var height = window.innerHeight;
         console.log(height);
         var wavesurfer = WaveSurfer.create({
           container     : '#waveform',
-          waveColor: '#4353FF',
-          progressColor: '#4353FF',
+          waveColor: color,
+          progressColor: color,
           cursorColor: '#000000',
           barWidth: 5,
           barRadius: 3,
@@ -34,6 +46,5 @@
         wavesurfer.microphone.start();
       }
     </script>
-    <a href="#" onclick="start();">start</a>
   </body>
 </html>
