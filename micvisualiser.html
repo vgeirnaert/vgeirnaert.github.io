@@ -4,13 +4,19 @@
   <body>
     <div id="waveform" style="height: 100%; width: 100%;">
     </div>
-    <script src="https://unpkg.com/wavesurfer.js"></script>
+    <script src="wavesurfer.js"></script>
+    <script src="wavesurfer.microphone.js"></script>
     <script type="">
       var wavesurfer = WaveSurfer.create({
       container     : '#waveform',
-      waveColor     : 'black',
-      interact      : false,
-      cursorWidth   : 0,
+      waveColor: '#D9DCFF',
+      progressColor: '#4353FF',
+      cursorColor: '#4353FF',
+      barWidth: 3,
+      barRadius: 3,
+      cursorWidth: 1,
+      height: 200,
+      barGap: 3,
       plugins: [
           WaveSurfer.microphone.create()
         ]
