@@ -1,8 +1,8 @@
 <html>
   <head>
   </head>
-  <body style="background-color: #000000">
-    <div id="waveform" style="height: 100%; width: 100%; overflow: hidden;">
+  <body style="background-color: #000000; overflow: hidden;">
+    <div id="waveform" style="height: 100%; width: 100%; overflow: hidden; ">
     </div>
     <script src="wavesurfer.js"></script>
     <script src="wavesurfer.microphone.js"></script>
@@ -16,9 +16,9 @@
           progressColor: '#4353FF',
           cursorColor: '#000000',
           barWidth: 5,
-          barRadius: 5,
+          barRadius: 3,
           cursorWidth: 0,
-          height: height,
+          height: height * 2,
           barGap: 5,
           plugins: [
               WaveSurfer.microphone.create()
