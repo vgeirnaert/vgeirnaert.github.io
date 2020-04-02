@@ -2,35 +2,38 @@
   <head>
   </head>
   <body style="background-color: #000000">
-    <div id="waveform" style="height: 100%; width: 100%;">
+    <div id="waveform" style="height: 100%; width: 100%; overflow: hidden;">
     </div>
     <script src="wavesurfer.js"></script>
     <script src="wavesurfer.microphone.js"></script>
-    <script type="">
-      var height = window.innerHeight;
-      console.log(height);
-      var wavesurfer = WaveSurfer.create({
-        container     : '#waveform',
-        waveColor: '#4353FF',
-        progressColor: '#4353FF',
-        cursorColor: '#000000',
-        barWidth: 5,
-        barRadius: 5,
-        cursorWidth: 0,
-        height: height,
-        barGap: 5,
-        plugins: [
-            WaveSurfer.microphone.create()
-        ]
-      });
+    <script type="text/javascript">
+      function start() {
+        var height = window.innerHeight;
+        console.log(height);
+        var wavesurfer = WaveSurfer.create({
+          container     : '#waveform',
+          waveColor: '#4353FF',
+          progressColor: '#4353FF',
+          cursorColor: '#000000',
+          barWidth: 5,
+          barRadius: 5,
+          cursorWidth: 0,
+          height: height,
+          barGap: 5,
+          plugins: [
+              WaveSurfer.microphone.create()
+          ]
+        });
 
-      wavesurfer.microphone.on('deviceReady', function(stream) {
-          console.log('Device ready!', stream);
-      });
-      wavesurfer.microphone.on('deviceError', function(code) {
-          console.warn('Device error: ' + code);
-      });
+        wavesurfer.microphone.on('deviceReady', function(stream) {
+            console.log('Device ready!', stream);
+        });
+        wavesurfer.microphone.on('deviceError', function(code) {
+            console.warn('Device error: ' + code);
+        });
+        wavesurfer.microphone.start();
+      }
     </script>
-    <a href="#" onclick="wavesurfer.microphone.start();">start</a>
+    <a href="#" onclick="start();">start</a>
   </body>
 </html>
